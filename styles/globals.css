@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Show only one line */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description.expanded {
+  -webkit-line-clamp: unset; /* Show all lines */
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
